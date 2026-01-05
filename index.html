@@ -24,7 +24,7 @@
             <video id="idle-video" loop muted playsinline>
                 <source src="assets/videos/idle.mp4" type="video/mp4">
             </video>
-            <div class="touch-prompt">Touch to Start</div>
+            <div class="touch-prompt"></div>
         </div>
 
         <!-- Interactive Layer (Image + Questions) -->
@@ -35,24 +35,24 @@
                     <h2 id="display-title"></h2>
                 </div>
                 
-                <!-- Main Display Image -->
+                <!-- Answer Buttons Grid at Top (2x3) -->
+                <div class="answers-section">
+                    <div class="answer-buttons" id="answer-buttons">
+                        <!-- 6 answer buttons will be generated here -->
+                    </div>
+                </div>
+                
+                <!-- Main Display Image in Center -->
                 <div class="main-image-section">
                     <img id="display-image" src="" alt="Display Image">
                 </div>
                 
                 <!-- Select Answers Label -->
                 <div class="select-label">SELECT 3 ANSWERS</div>
-                
-                <!-- Answer Buttons Grid (2x3) -->
-                <div class="answers-section">
-                    <div class="answer-buttons" id="answer-buttons">
-                        <!-- 6 answer buttons will be generated here -->
-                    </div>
-                </div>
 
                 <!-- Selected Answers at Bottom -->
                 <div class="selected-answers-section">
-                    <div class="selected-label">Your Selected Answers</div>
+                    <div class="selected-label"></div>
                     <div class="selected-slots">
                         <div class="answer-slot" data-slot="0"></div>
                         <div class="answer-slot" data-slot="1"></div>
@@ -63,8 +63,13 @@
             
             <!-- Waiting Overlay -->
             <div id="waiting-overlay" class="waiting-overlay">
-                <div class="waiting-spinner"></div>
-                <div class="waiting-text">Waiting for other displays...</div>
+                <img class="waiting-image" src="assets/images/bg4.png" alt="Loading">
+                <div class="loader">
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="waiting-text"></div>
                 <div class="waiting-status" id="waiting-status"></div>
             </div>
         </div>

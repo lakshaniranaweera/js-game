@@ -85,6 +85,10 @@ class MultiDisplayGame {
         this.elements.selectorScreen.classList.remove('active');
         this.elements.gameScreen.classList.add('active');
         
+        // Set background image for this display
+        this.elements.interactiveLayer.style.backgroundImage = 
+            `url('${this.displayConfig.background}')`;
+        
         // Broadcast that this display is ready
         this.broadcast({
             type: 'DISPLAY_READY',
